@@ -1,0 +1,135 @@
+/* GreenMuseum Styles */
+
+/* Base Styles */
+body {
+  margin: 0;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* App Container */
+.app-container {
+  min-height: 100vh;
+  background-color: #fef3c7; /* amber-50 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header */
+.header {
+  width: 100%;
+  padding: 2rem 1rem;
+  text-align: center;
+  background-color: #fef3c7; /* amber-100 */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #78350f; /* amber-900 */
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  color: #92400e; /* amber-700 */
+  max-width: 36rem;
+  margin: 0 auto;
+}
+
+/* Gallery */
+.gallery {
+  width: 100%;
+  max-width: 72rem;
+  padding: 2.5rem 1rem;
+}
+
+.gallery-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 640px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.artwork-card {
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.artwork-card:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.artwork-image {
+  width: 100%;
+  height: 14rem;
+  object-fit: cover;
+}
+
+.artwork-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.artwork-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #78350f; /* amber-900 */
+  margin-bottom: 0.25rem;
+}
+
+.artwork-description {
+  color: #92400e; /* amber-700 */
+  font-size: 0.875rem;
+  flex: 1;
+}
+
+.artwork-artist {
+  font-size: 0.875rem;
+  color: #92400e; /* amber-700 */
+  margin-top: 0.5rem;
+}
+
+.artwork-contact {
+  font-size: 0.75rem;
+  color: #92400e; /* amber-700 */
+  margin-top: 0.25rem;
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  padding: 1.5rem;
+  text-align: center;
+  color: #92400e; /* amber-700 */
+  font-size: 0.875rem;
+  background-color: #fef3c7; /* amber-100 */
+  border-top: 1px solid #fcd34d; /* amber-200 */
+}
